@@ -1,0 +1,30 @@
+{
+    "name": "phpixie-cron/cron-expression",
+    "type": "library",
+    "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+    "keywords": ["cron", "schedule"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0|^8.1|^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phpstan/phpstan": "^1.3",
+        "friendsofphp/php-cs-fixer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPixieCron\\Expression\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPixieCron\\Expression\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "./vendor/bin/phpstan analyse src",
+        "test": "phpunit",
+        "cs": "php-cs-fixer fix --rules=@PSR12 src"
+    }
+}
